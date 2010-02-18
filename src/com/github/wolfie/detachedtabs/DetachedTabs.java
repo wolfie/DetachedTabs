@@ -1,4 +1,4 @@
-package com.github.wolfie.disconnectedtabs;
+package com.github.wolfie.detachedtabs;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
