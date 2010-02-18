@@ -12,7 +12,7 @@ import com.vaadin.ui.Table;
 import com.vaadin.ui.Window;
 
 @SuppressWarnings("serial")
-public class DisconnectedtabsApplication extends Application {
+public class DetachedtabsApplication extends Application {
   
   @Override
   public void init() {
