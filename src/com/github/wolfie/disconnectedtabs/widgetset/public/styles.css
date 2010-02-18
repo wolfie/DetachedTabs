@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+.detachedtabs .tab {
+	background-color: white;
+	color: black;
+	padding: 5px;
+	border: 0;
+}
+
+.detachedtabs .tab-selected {
+	background-color: #aaa;
+	text-shadow: 0px 0px 1px white;
+	font-weight: bold;
+}
+
+.detachedtabs-horizontal .tab {
+	border-top: 2px solid black;
+	border-left: 1px solid black;
+	margin: 0 -1px -1px 0;
+}
+
+.detachedtabs-vertical .tab {
+	border-left: 2px solid black;
+	border-top: 1px solid black;
+	margin: 0 -1px -1px 0;
+}
+
+.detachedtabs-horizontal .tab-first {
+	border-left: 2px solid black;
+	-moz-border-radius: 10px 0 0 0;
+	-webkit-border-radius: 10px 0 0 0;
+	border-radius: 10px 0 0 0;
+}
+
+.detachedtabs-vertical .tab-first {
+	border-top: 2px solid black;
+	-moz-border-radius: 10px 0 0 0;
+	-webkit-border-radius: 10px 0 0 0;
+	border-radius: 10px 0 0 0;
+}
+
+.detachedtabs-horizontal .tab-last {
+	border-right: 2px solid black;
+	-moz-border-radius: 0 10px 0 0;
+	-webkit-border-radius: 0 10px 0 0;
+	border-radius: 0 10px 0 0;
+}
+
+.detachedtabs-vertical .tab-last {
+	border-bottom: 2px solid black;
+	-moz-border-radius: 0 0 0 10px;
+	-webkit-border-radius: 0 0 010px;
+	border-radius: 0 0 0 10px;
+}
