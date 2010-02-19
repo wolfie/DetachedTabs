@@ -1,6 +1,7 @@
 package com.github.wolfie.detachedtabs;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -110,19 +111,25 @@ public abstract class DetachedTabs extends CustomComponent {
     
     setStyleName(CLASS);
     
+    setSizeFull();
+    
     switch (orientation) {
     case HORIZONTAL:
       layout = new HorizontalLayout();
       addStyleName(CLASS_HORIZONTAL);
+      setHeight("30px");
       break;
     case VERTICAL:
       layout = new VerticalLayout();
       addStyleName(CLASS_VERTICAL);
+      setWidth("100px");
       break;
     default:
       throw new UnsupportedOperationException("orientation " + orientation
           + " not supported");
     }
+    
+    layout.setSizeFull();
     
     setCompositionRoot(layout);
     this.componentContainer = componentContainer;
@@ -147,7 +154,9 @@ public abstract class DetachedTabs extends CustomComponent {
     
     if (orientation == Orientation.HORIZONTAL) {
       button.setHeight("100%");
+      button.setWidth(getWidth(), getWidthUnits());
     } else {
+      button.setHeight(getHeight(), getHeightUnits());
       button.setWidth("100%");
     }
     
@@ -187,5 +196,29 @@ public abstract class DetachedTabs extends CustomComponent {
     shownTab = button;
     
     adjustTabStyles();
+  }
+  
+  @Override
+  public void setWidth(final float width, final int unit) {
+    if (orientation == Orientation.VERTICAL) {
+      final Iterator<Component> i = layout.getComponentIterator();
+      while (i.hasNext()) {
+        i.next().setWidth(width, unit);
+      }
+    }
+    
+    super.setWidth(width, unit);
+  }
+  
+  @Override
+  public void setHeight(final float height, final int unit) {
+    if (orientation == Orientation.HORIZONTAL) {
+      final Iterator<Component> i = layout.getComponentIterator();
+      while (i.hasNext()) {
+        i.next().setHeight(height, unit);
+      }
+    }
+    
+    super.setHeight(height, unit);
   }
 }

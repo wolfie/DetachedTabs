@@ -43,6 +43,8 @@ public class DetachedtabsApplication extends Application {
     detachedTabs.addTab(getRandomTable(), "Tab 2");
     detachedTabs.addTab(getRandomTable(), "Tab 3");
     detachedTabs.addTab(getVerticalExample(), "Vertical");
+    detachedTabs.setHeight("50px");
+    detachedTabs.setWidth("300px");
   }
   
   private Component getRandomTable() {
@@ -72,7 +74,8 @@ public class DetachedtabsApplication extends Application {
     verticalTabs.addTab(getRandomTable(), "Tab 1");
     verticalTabs.addTab(getRandomTable(), "Tab 2");
     verticalTabs.addTab(getRandomTable(), "Tab 3");
-    verticalTabs.setWidth("100px");
+    verticalTabs.setWidth("50px");
+    verticalTabs.setHeight("100px");
     
     layout.addComponent(verticalTabs);
     layout.addComponent(cssLayout);
