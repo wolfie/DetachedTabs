@@ -16,7 +16,7 @@ public class DetachedtabsApplication extends Application {
   
   @Override
   public void init() {
-    final Window mainWindow = new Window("Disconnectedtabs Application");
+    final Window mainWindow = new Window("DetachedTabs Application");
     setMainWindow(mainWindow);
     mainWindow.setContent(new CssLayout());
     mainWindow.getContent().setSizeFull();
