@@ -3,4 +3,5 @@
 <module>
 	<inherits name="com.vaadin.terminal.gwt.DefaultWidgetSet" />
 	<stylesheet src="styles.css"/>
+    <inherits name="com.github.wolfie.detachedtabs.widgetset.DetachedtabsWidgetset" />
 </module>
